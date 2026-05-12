@@ -1,0 +1,257 @@
+Date,Year,Quarter,Year Quarter,Fuel Type,Price cpl
+2010-01-01,2010,Q1,2010 Q1,Automotive LPG,62
+2010-01-01,2010,Q1,2010 Q1,Automotive diesel,125
+2010-01-01,2010,Q1,2010 Q1,Premium unleaded petrol (95 RON),136
+2010-01-01,2010,Q1,2010 Q1,Regular unleaded petrol (91 RON),126
+2010-04-01,2010,Q2,2010 Q2,Automotive LPG,60
+2010-04-01,2010,Q2,2010 Q2,Automotive diesel,130
+2010-04-01,2010,Q2,2010 Q2,Premium unleaded petrol (95 RON),139
+2010-04-01,2010,Q2,2010 Q2,Regular unleaded petrol (91 RON),129
+2010-07-01,2010,Q3,2010 Q3,Automotive LPG,54
+2010-07-01,2010,Q3,2010 Q3,Automotive diesel,128
+2010-07-01,2010,Q3,2010 Q3,Premium unleaded petrol (95 RON),135
+2010-07-01,2010,Q3,2010 Q3,Regular unleaded petrol (91 RON),124
+2010-10-01,2010,Q4,2010 Q4,Automotive LPG,61
+2010-10-01,2010,Q4,2010 Q4,Automotive diesel,129
+2010-10-01,2010,Q4,2010 Q4,Premium unleaded petrol (95 RON),136
+2010-10-01,2010,Q4,2010 Q4,Regular unleaded petrol (91 RON),126
+2011-01-01,2011,Q1,2011 Q1,Automotive LPG,73
+2011-01-01,2011,Q1,2011 Q1,Automotive diesel,142
+2011-01-01,2011,Q1,2011 Q1,Premium unleaded petrol (95 RON),148
+2011-01-01,2011,Q1,2011 Q1,Regular unleaded petrol (91 RON),137
+2011-04-01,2011,Q2,2011 Q2,Automotive LPG,72
+2011-04-01,2011,Q2,2011 Q2,Automotive diesel,151
+2011-04-01,2011,Q2,2011 Q2,Premium unleaded petrol (95 RON),154
+2011-04-01,2011,Q2,2011 Q2,Regular unleaded petrol (91 RON),143
+2011-07-01,2011,Q3,2011 Q3,Automotive LPG,69
+2011-07-01,2011,Q3,2011 Q3,Automotive diesel,146
+2011-07-01,2011,Q3,2011 Q3,Premium unleaded petrol (95 RON),152
+2011-07-01,2011,Q3,2011 Q3,Regular unleaded petrol (91 RON),142
+2011-10-01,2011,Q4,2011 Q4,Automotive LPG,68
+2011-10-01,2011,Q4,2011 Q4,Automotive diesel,149
+2011-10-01,2011,Q4,2011 Q4,Premium unleaded petrol (95 RON),154
+2011-10-01,2011,Q4,2011 Q4,Regular unleaded petrol (91 RON),142
+2012-01-01,2012,Q1,2012 Q1,Automotive LPG,75
+2012-01-01,2012,Q1,2012 Q1,Automotive diesel,150
+2012-01-01,2012,Q1,2012 Q1,Premium unleaded petrol (95 RON),156
+2012-01-01,2012,Q1,2012 Q1,Regular unleaded petrol (91 RON),145
+2012-04-01,2012,Q2,2012 Q2,Automotive LPG,73
+2012-04-01,2012,Q2,2012 Q2,Automotive diesel,152
+2012-04-01,2012,Q2,2012 Q2,Premium unleaded petrol (95 RON),158
+2012-04-01,2012,Q2,2012 Q2,Regular unleaded petrol (91 RON),146
+2012-07-01,2012,Q3,2012 Q3,Automotive LPG,63
+2012-07-01,2012,Q3,2012 Q3,Automotive diesel,146
+2012-07-01,2012,Q3,2012 Q3,Premium unleaded petrol (95 RON),152
+2012-07-01,2012,Q3,2012 Q3,Regular unleaded petrol (91 RON),139
+2012-10-01,2012,Q4,2012 Q4,Automotive LPG,75
+2012-10-01,2012,Q4,2012 Q4,Automotive diesel,150
+2012-10-01,2012,Q4,2012 Q4,Premium unleaded petrol (95 RON),153
+2012-10-01,2012,Q4,2012 Q4,Regular unleaded petrol (91 RON),142
+2013-01-01,2013,Q1,2013 Q1,Automotive LPG,70
+2013-01-01,2013,Q1,2013 Q1,Automotive diesel,150
+2013-01-01,2013,Q1,2013 Q1,Premium unleaded petrol (95 RON),155
+2013-01-01,2013,Q1,2013 Q1,Regular unleaded petrol (91 RON),145
+2013-04-01,2013,Q2,2013 Q2,Automotive LPG,64
+2013-04-01,2013,Q2,2013 Q2,Automotive diesel,146
+2013-04-01,2013,Q2,2013 Q2,Premium unleaded petrol (95 RON),151
+2013-04-01,2013,Q2,2013 Q2,Regular unleaded petrol (91 RON),141
+2013-07-01,2013,Q3,2013 Q3,Automotive LPG,73
+2013-07-01,2013,Q3,2013 Q3,Automotive diesel,155
+2013-07-01,2013,Q3,2013 Q3,Premium unleaded petrol (95 RON),160
+2013-07-01,2013,Q3,2013 Q3,Regular unleaded petrol (91 RON),150
+2013-10-01,2013,Q4,2013 Q4,Automotive LPG,80
+2013-10-01,2013,Q4,2013 Q4,Automotive diesel,159
+2013-10-01,2013,Q4,2013 Q4,Premium unleaded petrol (95 RON),159
+2013-10-01,2013,Q4,2013 Q4,Regular unleaded petrol (91 RON),148
+2014-01-01,2014,Q1,2014 Q1,Automotive LPG,89
+2014-01-01,2014,Q1,2014 Q1,Automotive diesel,161
+2014-01-01,2014,Q1,2014 Q1,Premium unleaded petrol (95 RON),165
+2014-01-01,2014,Q1,2014 Q1,Regular unleaded petrol (91 RON),154
+2014-04-01,2014,Q2,2014 Q2,Automotive LPG,77
+2014-04-01,2014,Q2,2014 Q2,Automotive diesel,158
+2014-04-01,2014,Q2,2014 Q2,Premium unleaded petrol (95 RON),162
+2014-04-01,2014,Q2,2014 Q2,Regular unleaded petrol (91 RON),151
+2014-07-01,2014,Q3,2014 Q3,Automotive LPG,74
+2014-07-01,2014,Q3,2014 Q3,Automotive diesel,155
+2014-07-01,2014,Q3,2014 Q3,Premium unleaded petrol (95 RON),157
+2014-07-01,2014,Q3,2014 Q3,Regular unleaded petrol (91 RON),147
+2014-10-01,2014,Q4,2014 Q4,Automotive LPG,70
+2014-10-01,2014,Q4,2014 Q4,Automotive diesel,147
+2014-10-01,2014,Q4,2014 Q4,Premium unleaded petrol (95 RON),147
+2014-10-01,2014,Q4,2014 Q4,Regular unleaded petrol (91 RON),136
+2015-01-01,2015,Q1,2015 Q1,Automotive LPG,60
+2015-01-01,2015,Q1,2015 Q1,Automotive diesel,129
+2015-01-01,2015,Q1,2015 Q1,Premium unleaded petrol (95 RON),131
+2015-01-01,2015,Q1,2015 Q1,Regular unleaded petrol (91 RON),120
+2015-04-01,2015,Q2,2015 Q2,Automotive LPG,59
+2015-04-01,2015,Q2,2015 Q2,Automotive diesel,132
+2015-04-01,2015,Q2,2015 Q2,Premium unleaded petrol (95 RON),148
+2015-04-01,2015,Q2,2015 Q2,Regular unleaded petrol (91 RON),136
+2015-07-01,2015,Q3,2015 Q3,Automotive LPG,56
+2015-07-01,2015,Q3,2015 Q3,Automotive diesel,130
+2015-07-01,2015,Q3,2015 Q3,Premium unleaded petrol (95 RON),146
+2015-07-01,2015,Q3,2015 Q3,Regular unleaded petrol (91 RON),133
+2015-10-01,2015,Q4,2015 Q4,Automotive LPG,59
+2015-10-01,2015,Q4,2015 Q4,Automotive diesel,126
+2015-10-01,2015,Q4,2015 Q4,Premium unleaded petrol (95 RON),137
+2015-10-01,2015,Q4,2015 Q4,Regular unleaded petrol (91 RON),125
+2016-01-01,2016,Q1,2016 Q1,Automotive LPG,60
+2016-01-01,2016,Q1,2016 Q1,Automotive diesel,114
+2016-01-01,2016,Q1,2016 Q1,Premium unleaded petrol (95 RON),137
+2016-01-01,2016,Q1,2016 Q1,Regular unleaded petrol (91 RON),112
+2016-04-01,2016,Q2,2016 Q2,Automotive LPG,62
+2016-04-01,2016,Q2,2016 Q2,Automotive diesel,115
+2016-04-01,2016,Q2,2016 Q2,Premium unleaded petrol (95 RON),128
+2016-04-01,2016,Q2,2016 Q2,Regular unleaded petrol (91 RON),119
+2016-07-01,2016,Q3,2016 Q3,Automotive LPG,59
+2016-07-01,2016,Q3,2016 Q3,Automotive diesel,118
+2016-07-01,2016,Q3,2016 Q3,Premium unleaded petrol (95 RON),127
+2016-07-01,2016,Q3,2016 Q3,Regular unleaded petrol (91 RON),115
+2016-10-01,2016,Q4,2016 Q4,Automotive LPG,64
+2016-10-01,2016,Q4,2016 Q4,Automotive diesel,124
+2016-10-01,2016,Q4,2016 Q4,Premium unleaded petrol (95 RON),134
+2016-10-01,2016,Q4,2016 Q4,Regular unleaded petrol (91 RON),123
+2017-01-01,2017,Q1,2017 Q1,Automotive LPG,71
+2017-01-01,2017,Q1,2017 Q1,Automotive diesel,130
+2017-01-01,2017,Q1,2017 Q1,Premium unleaded petrol (95 RON),141
+2017-01-01,2017,Q1,2017 Q1,Regular unleaded petrol (91 RON),130
+2017-04-01,2017,Q2,2017 Q2,Automotive LPG,70
+2017-04-01,2017,Q2,2017 Q2,Automotive diesel,128
+2017-04-01,2017,Q2,2017 Q2,Premium unleaded petrol (95 RON),138
+2017-04-01,2017,Q2,2017 Q2,Regular unleaded petrol (91 RON),126
+2017-07-01,2017,Q3,2017 Q3,Automotive LPG,68
+2017-07-01,2017,Q3,2017 Q3,Automotive diesel,126
+2017-07-01,2017,Q3,2017 Q3,Premium unleaded petrol (95 RON),135
+2017-07-01,2017,Q3,2017 Q3,Regular unleaded petrol (91 RON),123
+2017-10-01,2017,Q4,2017 Q4,Automotive LPG,77
+2017-10-01,2017,Q4,2017 Q4,Automotive diesel,133
+2017-10-01,2017,Q4,2017 Q4,Premium unleaded petrol (95 RON),149
+2017-10-01,2017,Q4,2017 Q4,Regular unleaded petrol (91 RON),136
+2018-01-01,2018,Q1,2018 Q1,Automotive LPG,80
+2018-01-01,2018,Q1,2018 Q1,Automotive diesel,139
+2018-01-01,2018,Q1,2018 Q1,Premium unleaded petrol (95 RON),149
+2018-01-01,2018,Q1,2018 Q1,Regular unleaded petrol (91 RON),136
+2018-04-01,2018,Q2,2018 Q2,Automotive LPG,78
+2018-04-01,2018,Q2,2018 Q2,Automotive diesel,149
+2018-04-01,2018,Q2,2018 Q2,Premium unleaded petrol (95 RON),159
+2018-04-01,2018,Q2,2018 Q2,Regular unleaded petrol (91 RON),146
+2018-07-01,2018,Q3,2018 Q3,Automotive LPG,80
+2018-07-01,2018,Q3,2018 Q3,Automotive diesel,154
+2018-07-01,2018,Q3,2018 Q3,Premium unleaded petrol (95 RON),159
+2018-07-01,2018,Q3,2018 Q3,Regular unleaded petrol (91 RON),148
+2018-10-01,2018,Q4,2018 Q4,Automotive LPG,83
+2018-10-01,2018,Q4,2018 Q4,Automotive diesel,157
+2018-10-01,2018,Q4,2018 Q4,Premium unleaded petrol (95 RON),155
+2018-10-01,2018,Q4,2018 Q4,Regular unleaded petrol (91 RON),143
+2019-01-01,2019,Q1,2019 Q1,Automotive LPG,72
+2019-01-01,2019,Q1,2019 Q1,Automotive diesel,143
+2019-01-01,2019,Q1,2019 Q1,Premium unleaded petrol (95 RON),143
+2019-01-01,2019,Q1,2019 Q1,Regular unleaded petrol (91 RON),131
+2019-04-01,2019,Q2,2019 Q2,Automotive LPG,76
+2019-04-01,2019,Q2,2019 Q2,Automotive diesel,149
+2019-04-01,2019,Q2,2019 Q2,Premium unleaded petrol (95 RON),159
+2019-04-01,2019,Q2,2019 Q2,Regular unleaded petrol (91 RON),146
+2019-07-01,2019,Q3,2019 Q3,Automotive LPG,72
+2019-07-01,2019,Q3,2019 Q3,Automotive diesel,146
+2019-07-01,2019,Q3,2019 Q3,Premium unleaded petrol (95 RON),156
+2019-07-01,2019,Q3,2019 Q3,Regular unleaded petrol (91 RON),142
+2019-10-01,2019,Q4,2019 Q4,Automotive LPG,71
+2019-10-01,2019,Q4,2019 Q4,Automotive diesel,148
+2019-10-01,2019,Q4,2019 Q4,Premium unleaded petrol (95 RON),164
+2019-10-01,2019,Q4,2019 Q4,Regular unleaded petrol (91 RON),150
+2020-01-01,2020,Q1,2020 Q1,Automotive LPG,77
+2020-01-01,2020,Q1,2020 Q1,Automotive diesel,145
+2020-01-01,2020,Q1,2020 Q1,Premium unleaded petrol (95 RON),154
+2020-01-01,2020,Q1,2020 Q1,Regular unleaded petrol (91 RON),139
+2020-04-01,2020,Q2,2020 Q2,Automotive LPG,70
+2020-04-01,2020,Q2,2020 Q2,Automotive diesel,120
+2020-04-01,2020,Q2,2020 Q2,Premium unleaded petrol (95 RON),125
+2020-04-01,2020,Q2,2020 Q2,Regular unleaded petrol (91 RON),110
+2020-07-01,2020,Q3,2020 Q3,Automotive LPG,70
+2020-07-01,2020,Q3,2020 Q3,Automotive diesel,118
+2020-07-01,2020,Q3,2020 Q3,Premium unleaded petrol (95 RON),137
+2020-07-01,2020,Q3,2020 Q3,Regular unleaded petrol (91 RON),123
+2020-10-01,2020,Q4,2020 Q4,Automotive LPG,69
+2020-10-01,2020,Q4,2020 Q4,Automotive diesel,117
+2020-10-01,2020,Q4,2020 Q4,Premium unleaded petrol (95 RON),139
+2020-10-01,2020,Q4,2020 Q4,Regular unleaded petrol (91 RON),123
+2021-01-01,2021,Q1,2021 Q1,Automotive LPG,76
+2021-01-01,2021,Q1,2021 Q1,Automotive diesel,126
+2021-01-01,2021,Q1,2021 Q1,Premium unleaded petrol (95 RON),149
+2021-01-01,2021,Q1,2021 Q1,Regular unleaded petrol (91 RON),134
+2021-04-01,2021,Q2,2021 Q2,Automotive LPG,80
+2021-04-01,2021,Q2,2021 Q2,Automotive diesel,135
+2021-04-01,2021,Q2,2021 Q2,Premium unleaded petrol (95 RON),159
+2021-04-01,2021,Q2,2021 Q2,Regular unleaded petrol (91 RON),143
+2021-07-01,2021,Q3,2021 Q3,Automotive LPG,82
+2021-07-01,2021,Q3,2021 Q3,Automotive diesel,145
+2021-07-01,2021,Q3,2021 Q3,Premium unleaded petrol (95 RON),169
+2021-07-01,2021,Q3,2021 Q3,Regular unleaded petrol (91 RON),153
+2021-10-01,2021,Q4,2021 Q4,Automotive LPG,96
+2021-10-01,2021,Q4,2021 Q4,Automotive diesel,160
+2021-10-01,2021,Q4,2021 Q4,Premium unleaded petrol (95 RON),180
+2021-10-01,2021,Q4,2021 Q4,Regular unleaded petrol (91 RON),164
+2022-01-01,2022,Q1,2022 Q1,Automotive LPG,101
+2022-01-01,2022,Q1,2022 Q1,Automotive diesel,182
+2022-01-01,2022,Q1,2022 Q1,Premium unleaded petrol (95 RON),197
+2022-01-01,2022,Q1,2022 Q1,Regular unleaded petrol (91 RON),182
+2022-04-01,2022,Q2,2022 Q2,Automotive LPG,100
+2022-04-01,2022,Q2,2022 Q2,Automotive diesel,206
+2022-04-01,2022,Q2,2022 Q2,Premium unleaded petrol (95 RON),204
+2022-04-01,2022,Q2,2022 Q2,Regular unleaded petrol (91 RON),189
+2022-07-01,2022,Q3,2022 Q3,Automotive LPG,96
+2022-07-01,2022,Q3,2022 Q3,Automotive diesel,210
+2022-07-01,2022,Q3,2022 Q3,Premium unleaded petrol (95 RON),195
+2022-07-01,2022,Q3,2022 Q3,Regular unleaded petrol (91 RON),180
+2022-10-01,2022,Q4,2022 Q4,Automotive LPG,95
+2022-10-01,2022,Q4,2022 Q4,Automotive diesel,222
+2022-10-01,2022,Q4,2022 Q4,Premium unleaded petrol (95 RON),199
+2022-10-01,2022,Q4,2022 Q4,Regular unleaded petrol (91 RON),184
+2023-01-01,2023,Q1,2023 Q1,Automotive LPG,101
+2023-01-01,2023,Q1,2023 Q1,Automotive diesel,199
+2023-01-01,2023,Q1,2023 Q1,Premium unleaded petrol (95 RON),199
+2023-01-01,2023,Q1,2023 Q1,Regular unleaded petrol (91 RON),183
+2023-04-01,2023,Q2,2023 Q2,Automotive LPG,100
+2023-04-01,2023,Q2,2023 Q2,Automotive diesel,186
+2023-04-01,2023,Q2,2023 Q2,Premium unleaded petrol (95 RON),199
+2023-04-01,2023,Q2,2023 Q2,Regular unleaded petrol (91 RON),184
+2023-07-01,2023,Q3,2023 Q3,Automotive LPG,91
+2023-07-01,2023,Q3,2023 Q3,Automotive diesel,202
+2023-07-01,2023,Q3,2023 Q3,Premium unleaded petrol (95 RON),213
+2023-07-01,2023,Q3,2023 Q3,Regular unleaded petrol (91 RON),197
+2023-10-01,2023,Q4,2023 Q4,Automotive LPG,96
+2023-10-01,2023,Q4,2023 Q4,Automotive diesel,209
+2023-10-01,2023,Q4,2023 Q4,Premium unleaded petrol (95 RON),212
+2023-10-01,2023,Q4,2023 Q4,Regular unleaded petrol (91 RON),196
+2024-01-01,2024,Q1,2024 Q1,Automotive LPG,97
+2024-01-01,2024,Q1,2024 Q1,Automotive diesel,196
+2024-01-01,2024,Q1,2024 Q1,Premium unleaded petrol (95 RON),211
+2024-01-01,2024,Q1,2024 Q1,Regular unleaded petrol (91 RON),195
+2024-04-01,2024,Q2,2024 Q2,Automotive LPG,98
+2024-04-01,2024,Q2,2024 Q2,Automotive diesel,195
+2024-04-01,2024,Q2,2024 Q2,Premium unleaded petrol (95 RON),216
+2024-04-01,2024,Q2,2024 Q2,Regular unleaded petrol (91 RON),198
+2024-07-01,2024,Q3,2024 Q3,Automotive LPG,100
+2024-07-01,2024,Q3,2024 Q3,Automotive diesel,186
+2024-07-01,2024,Q3,2024 Q3,Premium unleaded petrol (95 RON),201
+2024-07-01,2024,Q3,2024 Q3,Regular unleaded petrol (91 RON),184
+2024-10-01,2024,Q4,2024 Q4,Automotive LPG,99
+2024-10-01,2024,Q4,2024 Q4,Automotive diesel,177
+2024-10-01,2024,Q4,2024 Q4,Premium unleaded petrol (95 RON),198
+2024-10-01,2024,Q4,2024 Q4,Regular unleaded petrol (91 RON),181
+2025-01-01,2025,Q1,2025 Q1,Automotive LPG,101
+2025-01-01,2025,Q1,2025 Q1,Automotive diesel,187
+2025-01-01,2025,Q1,2025 Q1,Premium unleaded petrol (95 RON),201
+2025-01-01,2025,Q1,2025 Q1,Regular unleaded petrol (91 RON),183
+2025-04-01,2025,Q2,2025 Q2,Automotive LPG,102
+2025-04-01,2025,Q2,2025 Q2,Automotive diesel,179
+2025-04-01,2025,Q2,2025 Q2,Premium unleaded petrol (95 RON),194
+2025-04-01,2025,Q2,2025 Q2,Regular unleaded petrol (91 RON),177
+2025-07-01,2025,Q3,2025 Q3,Automotive LPG,105
+2025-07-01,2025,Q3,2025 Q3,Automotive diesel,183
+2025-07-01,2025,Q3,2025 Q3,Premium unleaded petrol (95 RON),198
+2025-07-01,2025,Q3,2025 Q3,Regular unleaded petrol (91 RON),181
+2025-10-01,2025,Q4,2025 Q4,Automotive LPG,101
+2025-10-01,2025,Q4,2025 Q4,Automotive diesel,186
+2025-10-01,2025,Q4,2025 Q4,Premium unleaded petrol (95 RON),200
+2025-10-01,2025,Q4,2025 Q4,Regular unleaded petrol (91 RON),182

@@ -1,0 +1,2069 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Road Fuel Sales by State",
+    "subtitle": "Annual petrol and diesel sales combined, 2011 to 2025",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#6b7280",
+    "offset": 12
+  },
+  "data": {
+    "values": [
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2011,
+        "Year Date": "2011-01-01",
+        "Road fuel ML": 10736.2
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2012,
+        "Year Date": "2012-01-01",
+        "Road fuel ML": 10903.2
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2013,
+        "Year Date": "2013-01-01",
+        "Road fuel ML": 11286.1
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2014,
+        "Year Date": "2014-01-01",
+        "Road fuel ML": 11323.7
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2015,
+        "Year Date": "2015-01-01",
+        "Road fuel ML": 11391.8
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2016,
+        "Year Date": "2016-01-01",
+        "Road fuel ML": 11405.8
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2017,
+        "Year Date": "2017-01-01",
+        "Road fuel ML": 12188.8
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2018,
+        "Year Date": "2018-01-01",
+        "Road fuel ML": 12447.1
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2019,
+        "Year Date": "2019-01-01",
+        "Road fuel ML": 12387.8
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2020,
+        "Year Date": "2020-01-01",
+        "Road fuel ML": 11601.3
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2021,
+        "Year Date": "2021-01-01",
+        "Road fuel ML": 11675.4
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2022,
+        "Year Date": "2022-01-01",
+        "Road fuel ML": 12191.0
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2023,
+        "Year Date": "2023-01-01",
+        "Road fuel ML": 12533.6
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2024,
+        "Year Date": "2024-01-01",
+        "Road fuel ML": 12654.3
+      },
+      {
+        "State": "NSW",
+        "State Order": 1,
+        "Year": 2025,
+        "Year Date": "2025-01-01",
+        "Road fuel ML": 12797.3
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2011,
+        "Year Date": "2011-01-01",
+        "Road fuel ML": 8358.5
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2012,
+        "Year Date": "2012-01-01",
+        "Road fuel ML": 8631.0
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2013,
+        "Year Date": "2013-01-01",
+        "Road fuel ML": 8827.1
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2014,
+        "Year Date": "2014-01-01",
+        "Road fuel ML": 9003.3
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2015,
+        "Year Date": "2015-01-01",
+        "Road fuel ML": 9201.1
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2016,
+        "Year Date": "2016-01-01",
+        "Road fuel ML": 9355.2
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2017,
+        "Year Date": "2017-01-01",
+        "Road fuel ML": 9649.3
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2018,
+        "Year Date": "2018-01-01",
+        "Road fuel ML": 9742.4
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2019,
+        "Year Date": "2019-01-01",
+        "Road fuel ML": 9849.5
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2020,
+        "Year Date": "2020-01-01",
+        "Road fuel ML": 8749.2
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2021,
+        "Year Date": "2021-01-01",
+        "Road fuel ML": 9308.2
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2022,
+        "Year Date": "2022-01-01",
+        "Road fuel ML": 9847.1
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2023,
+        "Year Date": "2023-01-01",
+        "Road fuel ML": 10045.8
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2024,
+        "Year Date": "2024-01-01",
+        "Road fuel ML": 10065.5
+      },
+      {
+        "State": "VIC",
+        "State Order": 2,
+        "Year": 2025,
+        "Year Date": "2025-01-01",
+        "Road fuel ML": 10014.0
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2011,
+        "Year Date": "2011-01-01",
+        "Road fuel ML": 10550.3
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2012,
+        "Year Date": "2012-01-01",
+        "Road fuel ML": 11237.1
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2013,
+        "Year Date": "2013-01-01",
+        "Road fuel ML": 11345.4
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2014,
+        "Year Date": "2014-01-01",
+        "Road fuel ML": 10898.5
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2015,
+        "Year Date": "2015-01-01",
+        "Road fuel ML": 10986.9
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2016,
+        "Year Date": "2016-01-01",
+        "Road fuel ML": 10471.2
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2017,
+        "Year Date": "2017-01-01",
+        "Road fuel ML": 11119.8
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2018,
+        "Year Date": "2018-01-01",
+        "Road fuel ML": 11695.2
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2019,
+        "Year Date": "2019-01-01",
+        "Road fuel ML": 11321.5
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2020,
+        "Year Date": "2020-01-01",
+        "Road fuel ML": 10854.5
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2021,
+        "Year Date": "2021-01-01",
+        "Road fuel ML": 11332.5
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2022,
+        "Year Date": "2022-01-01",
+        "Road fuel ML": 11296.8
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2023,
+        "Year Date": "2023-01-01",
+        "Road fuel ML": 11577.3
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2024,
+        "Year Date": "2024-01-01",
+        "Road fuel ML": 12196.9
+      },
+      {
+        "State": "QLD",
+        "State Order": 3,
+        "Year": 2025,
+        "Year Date": "2025-01-01",
+        "Road fuel ML": 12040.4
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2011,
+        "Year Date": "2011-01-01",
+        "Road fuel ML": 7260.9
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2012,
+        "Year Date": "2012-01-01",
+        "Road fuel ML": 7781.6
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2013,
+        "Year Date": "2013-01-01",
+        "Road fuel ML": 8271.6
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2014,
+        "Year Date": "2014-01-01",
+        "Road fuel ML": 8374.1
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2015,
+        "Year Date": "2015-01-01",
+        "Road fuel ML": 8291.2
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2016,
+        "Year Date": "2016-01-01",
+        "Road fuel ML": 8200.0
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2017,
+        "Year Date": "2017-01-01",
+        "Road fuel ML": 8565.9
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2018,
+        "Year Date": "2018-01-01",
+        "Road fuel ML": 8411.8
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2019,
+        "Year Date": "2019-01-01",
+        "Road fuel ML": 8648.1
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2020,
+        "Year Date": "2020-01-01",
+        "Road fuel ML": 8716.7
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2021,
+        "Year Date": "2021-01-01",
+        "Road fuel ML": 9422.7
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2022,
+        "Year Date": "2022-01-01",
+        "Road fuel ML": 9362.9
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2023,
+        "Year Date": "2023-01-01",
+        "Road fuel ML": 9721.4
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2024,
+        "Year Date": "2024-01-01",
+        "Road fuel ML": 9939.9
+      },
+      {
+        "State": "WA",
+        "State Order": 4,
+        "Year": 2025,
+        "Year Date": "2025-01-01",
+        "Road fuel ML": 9748.0
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2011,
+        "Year Date": "2011-01-01",
+        "Road fuel ML": 2838.5
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2012,
+        "Year Date": "2012-01-01",
+        "Road fuel ML": 2847.1
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2013,
+        "Year Date": "2013-01-01",
+        "Road fuel ML": 2995.9
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2014,
+        "Year Date": "2014-01-01",
+        "Road fuel ML": 3017.0
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2015,
+        "Year Date": "2015-01-01",
+        "Road fuel ML": 2957.8
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2016,
+        "Year Date": "2016-01-01",
+        "Road fuel ML": 2900.0
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2017,
+        "Year Date": "2017-01-01",
+        "Road fuel ML": 2972.7
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2018,
+        "Year Date": "2018-01-01",
+        "Road fuel ML": 3082.7
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2019,
+        "Year Date": "2019-01-01",
+        "Road fuel ML": 2944.8
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2020,
+        "Year Date": "2020-01-01",
+        "Road fuel ML": 2857.5
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2021,
+        "Year Date": "2021-01-01",
+        "Road fuel ML": 2928.3
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2022,
+        "Year Date": "2022-01-01",
+        "Road fuel ML": 2995.7
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2023,
+        "Year Date": "2023-01-01",
+        "Road fuel ML": 3042.1
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2024,
+        "Year Date": "2024-01-01",
+        "Road fuel ML": 3022.6
+      },
+      {
+        "State": "SA",
+        "State Order": 5,
+        "Year": 2025,
+        "Year Date": "2025-01-01",
+        "Road fuel ML": 2846.1
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2011,
+        "Year Date": "2011-01-01",
+        "Road fuel ML": 776.1
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2012,
+        "Year Date": "2012-01-01",
+        "Road fuel ML": 762.7
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2013,
+        "Year Date": "2013-01-01",
+        "Road fuel ML": 823.7
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2014,
+        "Year Date": "2014-01-01",
+        "Road fuel ML": 880.3
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2015,
+        "Year Date": "2015-01-01",
+        "Road fuel ML": 888.3
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2016,
+        "Year Date": "2016-01-01",
+        "Road fuel ML": 874.2
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2017,
+        "Year Date": "2017-01-01",
+        "Road fuel ML": 849.9
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2018,
+        "Year Date": "2018-01-01",
+        "Road fuel ML": 916.6
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2019,
+        "Year Date": "2019-01-01",
+        "Road fuel ML": 931.1
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2020,
+        "Year Date": "2020-01-01",
+        "Road fuel ML": 907.1
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2021,
+        "Year Date": "2021-01-01",
+        "Road fuel ML": 943.7
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2022,
+        "Year Date": "2022-01-01",
+        "Road fuel ML": 883.1
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2023,
+        "Year Date": "2023-01-01",
+        "Road fuel ML": 893.0
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2024,
+        "Year Date": "2024-01-01",
+        "Road fuel ML": 871.0
+      },
+      {
+        "State": "TAS",
+        "State Order": 6,
+        "Year": 2025,
+        "Year Date": "2025-01-01",
+        "Road fuel ML": 915.0
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2011,
+        "Year Date": "2011-01-01",
+        "Road fuel ML": 834.6
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2012,
+        "Year Date": "2012-01-01",
+        "Road fuel ML": 750.8
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2013,
+        "Year Date": "2013-01-01",
+        "Road fuel ML": 751.6
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2014,
+        "Year Date": "2014-01-01",
+        "Road fuel ML": 824.5
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2015,
+        "Year Date": "2015-01-01",
+        "Road fuel ML": 732.8
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2016,
+        "Year Date": "2016-01-01",
+        "Road fuel ML": 734.6
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2017,
+        "Year Date": "2017-01-01",
+        "Road fuel ML": 845.7
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2018,
+        "Year Date": "2018-01-01",
+        "Road fuel ML": 988.7
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2019,
+        "Year Date": "2019-01-01",
+        "Road fuel ML": 844.5
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2020,
+        "Year Date": "2020-01-01",
+        "Road fuel ML": 799.0
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2021,
+        "Year Date": "2021-01-01",
+        "Road fuel ML": 837.3
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2022,
+        "Year Date": "2022-01-01",
+        "Road fuel ML": 823.4
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2023,
+        "Year Date": "2023-01-01",
+        "Road fuel ML": 833.7
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2024,
+        "Year Date": "2024-01-01",
+        "Road fuel ML": 914.1
+      },
+      {
+        "State": "NT",
+        "State Order": 7,
+        "Year": 2025,
+        "Year Date": "2025-01-01",
+        "Road fuel ML": 945.0
+      }
+    ]
+  },
+  "vconcat": [
+    {
+      "hconcat": [
+        {
+          "title": {
+            "text": "NSW",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 8
+          },
+          "width": 190,
+          "height": 120,
+          "transform": [
+            {
+              "filter": "datum.State == 'NSW'"
+            },
+            {
+              "calculate": "datum['Road fuel ML'] / 1000",
+              "as": "Road fuel BL"
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "area",
+                "interpolate": "monotone",
+                "color": "#9cc9dd",
+                "opacity": 0.55
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal",
+                  "title": null,
+                  "axis": {
+                    "format": "%Y",
+                    "labelAngle": 0,
+                    "labelFontSize": 10,
+                    "tickCount": 4,
+                    "grid": false
+                  }
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative",
+                  "title": null,
+                  "axis": {
+                    "labelFontSize": 10,
+                    "gridColor": "#e5e7eb"
+                  },
+                  "scale": {
+                    "zero": true
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "interpolate": "monotone",
+                "color": "#2f6f9f",
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 20,
+                "color": "#2f6f9f",
+                "opacity": 0.75,
+                "stroke": "white",
+                "strokeWidth": 0.7
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "transform": [
+                {
+                  "filter": "datum.Year == 2025"
+                }
+              ],
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 55,
+                "color": "#f39b35",
+                "stroke": "white",
+                "strokeWidth": 1
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "2025 sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "VIC",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 8
+          },
+          "width": 190,
+          "height": 120,
+          "transform": [
+            {
+              "filter": "datum.State == 'VIC'"
+            },
+            {
+              "calculate": "datum['Road fuel ML'] / 1000",
+              "as": "Road fuel BL"
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "area",
+                "interpolate": "monotone",
+                "color": "#9cc9dd",
+                "opacity": 0.55
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal",
+                  "title": null,
+                  "axis": {
+                    "format": "%Y",
+                    "labelAngle": 0,
+                    "labelFontSize": 10,
+                    "tickCount": 4,
+                    "grid": false
+                  }
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative",
+                  "title": null,
+                  "axis": {
+                    "labelFontSize": 10,
+                    "gridColor": "#e5e7eb"
+                  },
+                  "scale": {
+                    "zero": true
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "interpolate": "monotone",
+                "color": "#2f6f9f",
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 20,
+                "color": "#2f6f9f",
+                "opacity": 0.75,
+                "stroke": "white",
+                "strokeWidth": 0.7
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "transform": [
+                {
+                  "filter": "datum.Year == 2025"
+                }
+              ],
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 55,
+                "color": "#f39b35",
+                "stroke": "white",
+                "strokeWidth": 1
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "2025 sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "QLD",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 8
+          },
+          "width": 190,
+          "height": 120,
+          "transform": [
+            {
+              "filter": "datum.State == 'QLD'"
+            },
+            {
+              "calculate": "datum['Road fuel ML'] / 1000",
+              "as": "Road fuel BL"
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "area",
+                "interpolate": "monotone",
+                "color": "#9cc9dd",
+                "opacity": 0.55
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal",
+                  "title": null,
+                  "axis": {
+                    "format": "%Y",
+                    "labelAngle": 0,
+                    "labelFontSize": 10,
+                    "tickCount": 4,
+                    "grid": false
+                  }
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative",
+                  "title": null,
+                  "axis": {
+                    "labelFontSize": 10,
+                    "gridColor": "#e5e7eb"
+                  },
+                  "scale": {
+                    "zero": true
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "interpolate": "monotone",
+                "color": "#2f6f9f",
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 20,
+                "color": "#2f6f9f",
+                "opacity": 0.75,
+                "stroke": "white",
+                "strokeWidth": 0.7
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "transform": [
+                {
+                  "filter": "datum.Year == 2025"
+                }
+              ],
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 55,
+                "color": "#f39b35",
+                "stroke": "white",
+                "strokeWidth": 1
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "2025 sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "WA",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 8
+          },
+          "width": 190,
+          "height": 120,
+          "transform": [
+            {
+              "filter": "datum.State == 'WA'"
+            },
+            {
+              "calculate": "datum['Road fuel ML'] / 1000",
+              "as": "Road fuel BL"
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "area",
+                "interpolate": "monotone",
+                "color": "#9cc9dd",
+                "opacity": 0.55
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal",
+                  "title": null,
+                  "axis": {
+                    "format": "%Y",
+                    "labelAngle": 0,
+                    "labelFontSize": 10,
+                    "tickCount": 4,
+                    "grid": false
+                  }
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative",
+                  "title": null,
+                  "axis": {
+                    "labelFontSize": 10,
+                    "gridColor": "#e5e7eb"
+                  },
+                  "scale": {
+                    "zero": true
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "interpolate": "monotone",
+                "color": "#2f6f9f",
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 20,
+                "color": "#2f6f9f",
+                "opacity": 0.75,
+                "stroke": "white",
+                "strokeWidth": 0.7
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "transform": [
+                {
+                  "filter": "datum.Year == 2025"
+                }
+              ],
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 55,
+                "color": "#f39b35",
+                "stroke": "white",
+                "strokeWidth": 1
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "2025 sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "title": {
+            "text": "SA",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 8
+          },
+          "width": 190,
+          "height": 120,
+          "transform": [
+            {
+              "filter": "datum.State == 'SA'"
+            },
+            {
+              "calculate": "datum['Road fuel ML'] / 1000",
+              "as": "Road fuel BL"
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "area",
+                "interpolate": "monotone",
+                "color": "#9cc9dd",
+                "opacity": 0.55
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal",
+                  "title": null,
+                  "axis": {
+                    "format": "%Y",
+                    "labelAngle": 0,
+                    "labelFontSize": 10,
+                    "tickCount": 4,
+                    "grid": false
+                  }
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative",
+                  "title": null,
+                  "axis": {
+                    "labelFontSize": 10,
+                    "gridColor": "#e5e7eb"
+                  },
+                  "scale": {
+                    "zero": true
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "interpolate": "monotone",
+                "color": "#2f6f9f",
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 20,
+                "color": "#2f6f9f",
+                "opacity": 0.75,
+                "stroke": "white",
+                "strokeWidth": 0.7
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "transform": [
+                {
+                  "filter": "datum.Year == 2025"
+                }
+              ],
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 55,
+                "color": "#f39b35",
+                "stroke": "white",
+                "strokeWidth": 1
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "2025 sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "TAS",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 8
+          },
+          "width": 190,
+          "height": 120,
+          "transform": [
+            {
+              "filter": "datum.State == 'TAS'"
+            },
+            {
+              "calculate": "datum['Road fuel ML'] / 1000",
+              "as": "Road fuel BL"
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "area",
+                "interpolate": "monotone",
+                "color": "#9cc9dd",
+                "opacity": 0.55
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal",
+                  "title": null,
+                  "axis": {
+                    "format": "%Y",
+                    "labelAngle": 0,
+                    "labelFontSize": 10,
+                    "tickCount": 4,
+                    "grid": false
+                  }
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative",
+                  "title": null,
+                  "axis": {
+                    "labelFontSize": 10,
+                    "gridColor": "#e5e7eb"
+                  },
+                  "scale": {
+                    "zero": true
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "interpolate": "monotone",
+                "color": "#2f6f9f",
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 20,
+                "color": "#2f6f9f",
+                "opacity": 0.75,
+                "stroke": "white",
+                "strokeWidth": 0.7
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "transform": [
+                {
+                  "filter": "datum.Year == 2025"
+                }
+              ],
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 55,
+                "color": "#f39b35",
+                "stroke": "white",
+                "strokeWidth": 1
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "2025 sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "NT",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 8
+          },
+          "width": 190,
+          "height": 120,
+          "transform": [
+            {
+              "filter": "datum.State == 'NT'"
+            },
+            {
+              "calculate": "datum['Road fuel ML'] / 1000",
+              "as": "Road fuel BL"
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "area",
+                "interpolate": "monotone",
+                "color": "#9cc9dd",
+                "opacity": 0.55
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal",
+                  "title": null,
+                  "axis": {
+                    "format": "%Y",
+                    "labelAngle": 0,
+                    "labelFontSize": 10,
+                    "tickCount": 4,
+                    "grid": false
+                  }
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative",
+                  "title": null,
+                  "axis": {
+                    "labelFontSize": 10,
+                    "gridColor": "#e5e7eb"
+                  },
+                  "scale": {
+                    "zero": true
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "interpolate": "monotone",
+                "color": "#2f6f9f",
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 20,
+                "color": "#2f6f9f",
+                "opacity": 0.75,
+                "stroke": "white",
+                "strokeWidth": 0.7
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "Road fuel sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            },
+            {
+              "transform": [
+                {
+                  "filter": "datum.Year == 2025"
+                }
+              ],
+              "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 55,
+                "color": "#f39b35",
+                "stroke": "white",
+                "strokeWidth": 1
+              },
+              "encoding": {
+                "x": {
+                  "field": "Year Date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "Road fuel BL",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "State",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal"
+                  },
+                  {
+                    "field": "Road fuel BL",
+                    "type": "quantitative",
+                    "title": "2025 sales (billion L)",
+                    "format": ".1f"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  },
+  "config": {
+    "background": "#ffffff",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151"
+    },
+    "title": {
+      "font": "Inter, Arial, sans-serif"
+    }
+  }
+}

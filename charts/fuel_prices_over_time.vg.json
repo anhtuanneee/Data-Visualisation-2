@@ -1,0 +1,300 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Australian Fuel Prices Over Time",
+    "subtitle": "Quarterly average retail fuel prices, 2010 Q1 to 2025 Q4",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#6b7280",
+    "offset": 12
+  },
+  "data": {
+    "values": [
+      {"Date":"2010-01-01","Year Quarter":"2010 Q1","Regular petrol (91 RON)":126,"Premium petrol (95 RON)":136,"Diesel":125},
+      {"Date":"2010-04-01","Year Quarter":"2010 Q2","Regular petrol (91 RON)":129,"Premium petrol (95 RON)":139,"Diesel":130},
+      {"Date":"2010-07-01","Year Quarter":"2010 Q3","Regular petrol (91 RON)":124,"Premium petrol (95 RON)":135,"Diesel":128},
+      {"Date":"2010-10-01","Year Quarter":"2010 Q4","Regular petrol (91 RON)":126,"Premium petrol (95 RON)":136,"Diesel":129},
+      {"Date":"2011-01-01","Year Quarter":"2011 Q1","Regular petrol (91 RON)":137,"Premium petrol (95 RON)":148,"Diesel":142},
+      {"Date":"2011-04-01","Year Quarter":"2011 Q2","Regular petrol (91 RON)":143,"Premium petrol (95 RON)":154,"Diesel":151},
+      {"Date":"2011-07-01","Year Quarter":"2011 Q3","Regular petrol (91 RON)":142,"Premium petrol (95 RON)":152,"Diesel":146},
+      {"Date":"2011-10-01","Year Quarter":"2011 Q4","Regular petrol (91 RON)":142,"Premium petrol (95 RON)":154,"Diesel":149},
+      {"Date":"2012-01-01","Year Quarter":"2012 Q1","Regular petrol (91 RON)":145,"Premium petrol (95 RON)":156,"Diesel":150},
+      {"Date":"2012-04-01","Year Quarter":"2012 Q2","Regular petrol (91 RON)":146,"Premium petrol (95 RON)":158,"Diesel":152},
+      {"Date":"2012-07-01","Year Quarter":"2012 Q3","Regular petrol (91 RON)":139,"Premium petrol (95 RON)":152,"Diesel":146},
+      {"Date":"2012-10-01","Year Quarter":"2012 Q4","Regular petrol (91 RON)":142,"Premium petrol (95 RON)":153,"Diesel":150},
+      {"Date":"2013-01-01","Year Quarter":"2013 Q1","Regular petrol (91 RON)":145,"Premium petrol (95 RON)":155,"Diesel":150},
+      {"Date":"2013-04-01","Year Quarter":"2013 Q2","Regular petrol (91 RON)":141,"Premium petrol (95 RON)":151,"Diesel":146},
+      {"Date":"2013-07-01","Year Quarter":"2013 Q3","Regular petrol (91 RON)":150,"Premium petrol (95 RON)":160,"Diesel":155},
+      {"Date":"2013-10-01","Year Quarter":"2013 Q4","Regular petrol (91 RON)":148,"Premium petrol (95 RON)":159,"Diesel":159},
+      {"Date":"2014-01-01","Year Quarter":"2014 Q1","Regular petrol (91 RON)":154,"Premium petrol (95 RON)":165,"Diesel":161},
+      {"Date":"2014-04-01","Year Quarter":"2014 Q2","Regular petrol (91 RON)":151,"Premium petrol (95 RON)":162,"Diesel":158},
+      {"Date":"2014-07-01","Year Quarter":"2014 Q3","Regular petrol (91 RON)":147,"Premium petrol (95 RON)":157,"Diesel":155},
+      {"Date":"2014-10-01","Year Quarter":"2014 Q4","Regular petrol (91 RON)":136,"Premium petrol (95 RON)":147,"Diesel":147},
+      {"Date":"2015-01-01","Year Quarter":"2015 Q1","Regular petrol (91 RON)":120,"Premium petrol (95 RON)":131,"Diesel":129},
+      {"Date":"2015-04-01","Year Quarter":"2015 Q2","Regular petrol (91 RON)":136,"Premium petrol (95 RON)":148,"Diesel":132},
+      {"Date":"2015-07-01","Year Quarter":"2015 Q3","Regular petrol (91 RON)":133,"Premium petrol (95 RON)":146,"Diesel":130},
+      {"Date":"2015-10-01","Year Quarter":"2015 Q4","Regular petrol (91 RON)":125,"Premium petrol (95 RON)":137,"Diesel":126},
+      {"Date":"2016-01-01","Year Quarter":"2016 Q1","Regular petrol (91 RON)":112,"Premium petrol (95 RON)":137,"Diesel":114},
+      {"Date":"2016-04-01","Year Quarter":"2016 Q2","Regular petrol (91 RON)":119,"Premium petrol (95 RON)":128,"Diesel":115},
+      {"Date":"2016-07-01","Year Quarter":"2016 Q3","Regular petrol (91 RON)":115,"Premium petrol (95 RON)":127,"Diesel":118},
+      {"Date":"2016-10-01","Year Quarter":"2016 Q4","Regular petrol (91 RON)":123,"Premium petrol (95 RON)":134,"Diesel":124},
+      {"Date":"2017-01-01","Year Quarter":"2017 Q1","Regular petrol (91 RON)":130,"Premium petrol (95 RON)":141,"Diesel":130},
+      {"Date":"2017-04-01","Year Quarter":"2017 Q2","Regular petrol (91 RON)":126,"Premium petrol (95 RON)":138,"Diesel":128},
+      {"Date":"2017-07-01","Year Quarter":"2017 Q3","Regular petrol (91 RON)":123,"Premium petrol (95 RON)":135,"Diesel":126},
+      {"Date":"2017-10-01","Year Quarter":"2017 Q4","Regular petrol (91 RON)":136,"Premium petrol (95 RON)":149,"Diesel":133},
+      {"Date":"2018-01-01","Year Quarter":"2018 Q1","Regular petrol (91 RON)":136,"Premium petrol (95 RON)":149,"Diesel":139},
+      {"Date":"2018-04-01","Year Quarter":"2018 Q2","Regular petrol (91 RON)":146,"Premium petrol (95 RON)":159,"Diesel":149},
+      {"Date":"2018-07-01","Year Quarter":"2018 Q3","Regular petrol (91 RON)":148,"Premium petrol (95 RON)":159,"Diesel":154},
+      {"Date":"2018-10-01","Year Quarter":"2018 Q4","Regular petrol (91 RON)":143,"Premium petrol (95 RON)":155,"Diesel":157},
+      {"Date":"2019-01-01","Year Quarter":"2019 Q1","Regular petrol (91 RON)":131,"Premium petrol (95 RON)":143,"Diesel":143},
+      {"Date":"2019-04-01","Year Quarter":"2019 Q2","Regular petrol (91 RON)":146,"Premium petrol (95 RON)":159,"Diesel":149},
+      {"Date":"2019-07-01","Year Quarter":"2019 Q3","Regular petrol (91 RON)":142,"Premium petrol (95 RON)":156,"Diesel":146},
+      {"Date":"2019-10-01","Year Quarter":"2019 Q4","Regular petrol (91 RON)":150,"Premium petrol (95 RON)":164,"Diesel":148},
+      {"Date":"2020-01-01","Year Quarter":"2020 Q1","Regular petrol (91 RON)":139,"Premium petrol (95 RON)":154,"Diesel":145},
+      {"Date":"2020-04-01","Year Quarter":"2020 Q2","Regular petrol (91 RON)":110,"Premium petrol (95 RON)":125,"Diesel":120},
+      {"Date":"2020-07-01","Year Quarter":"2020 Q3","Regular petrol (91 RON)":123,"Premium petrol (95 RON)":137,"Diesel":118},
+      {"Date":"2020-10-01","Year Quarter":"2020 Q4","Regular petrol (91 RON)":123,"Premium petrol (95 RON)":139,"Diesel":117},
+      {"Date":"2021-01-01","Year Quarter":"2021 Q1","Regular petrol (91 RON)":134,"Premium petrol (95 RON)":149,"Diesel":126},
+      {"Date":"2021-04-01","Year Quarter":"2021 Q2","Regular petrol (91 RON)":143,"Premium petrol (95 RON)":159,"Diesel":135},
+      {"Date":"2021-07-01","Year Quarter":"2021 Q3","Regular petrol (91 RON)":153,"Premium petrol (95 RON)":169,"Diesel":145},
+      {"Date":"2021-10-01","Year Quarter":"2021 Q4","Regular petrol (91 RON)":164,"Premium petrol (95 RON)":180,"Diesel":160},
+      {"Date":"2022-01-01","Year Quarter":"2022 Q1","Regular petrol (91 RON)":182,"Premium petrol (95 RON)":197,"Diesel":182},
+      {"Date":"2022-04-01","Year Quarter":"2022 Q2","Regular petrol (91 RON)":189,"Premium petrol (95 RON)":204,"Diesel":206},
+      {"Date":"2022-07-01","Year Quarter":"2022 Q3","Regular petrol (91 RON)":180,"Premium petrol (95 RON)":195,"Diesel":210},
+      {"Date":"2022-10-01","Year Quarter":"2022 Q4","Regular petrol (91 RON)":184,"Premium petrol (95 RON)":199,"Diesel":222},
+      {"Date":"2023-01-01","Year Quarter":"2023 Q1","Regular petrol (91 RON)":183,"Premium petrol (95 RON)":199,"Diesel":199},
+      {"Date":"2023-04-01","Year Quarter":"2023 Q2","Regular petrol (91 RON)":184,"Premium petrol (95 RON)":199,"Diesel":186},
+      {"Date":"2023-07-01","Year Quarter":"2023 Q3","Regular petrol (91 RON)":197,"Premium petrol (95 RON)":213,"Diesel":202},
+      {"Date":"2023-10-01","Year Quarter":"2023 Q4","Regular petrol (91 RON)":196,"Premium petrol (95 RON)":212,"Diesel":209},
+      {"Date":"2024-01-01","Year Quarter":"2024 Q1","Regular petrol (91 RON)":195,"Premium petrol (95 RON)":211,"Diesel":196},
+      {"Date":"2024-04-01","Year Quarter":"2024 Q2","Regular petrol (91 RON)":198,"Premium petrol (95 RON)":216,"Diesel":195},
+      {"Date":"2024-07-01","Year Quarter":"2024 Q3","Regular petrol (91 RON)":184,"Premium petrol (95 RON)":201,"Diesel":186},
+      {"Date":"2024-10-01","Year Quarter":"2024 Q4","Regular petrol (91 RON)":181,"Premium petrol (95 RON)":198,"Diesel":177},
+      {"Date":"2025-01-01","Year Quarter":"2025 Q1","Regular petrol (91 RON)":183,"Premium petrol (95 RON)":201,"Diesel":187},
+      {"Date":"2025-04-01","Year Quarter":"2025 Q2","Regular petrol (91 RON)":177,"Premium petrol (95 RON)":194,"Diesel":179},
+      {"Date":"2025-07-01","Year Quarter":"2025 Q3","Regular petrol (91 RON)":181,"Premium petrol (95 RON)":198,"Diesel":183},
+      {"Date":"2025-10-01","Year Quarter":"2025 Q4","Regular petrol (91 RON)":182,"Premium petrol (95 RON)":200,"Diesel":186}
+    ]
+  },
+  "width": "container",
+  "height": 360,
+  "layer": [
+    {
+      "transform": [
+        {
+          "fold": [
+            "Regular petrol (91 RON)",
+            "Premium petrol (95 RON)",
+            "Diesel"
+          ],
+          "as": [
+            "Fuel Type",
+            "Price cpl"
+          ]
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "interpolate": "monotone",
+        "strokeWidth": 2.8
+      },
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal",
+          "title": "Year",
+          "axis": {
+            "format": "%Y",
+            "labelAngle": 0,
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "Price cpl",
+          "type": "quantitative",
+          "title": "Cents per litre",
+          "scale": {
+            "domain": [
+              100,
+              238
+            ]
+          },
+          "axis": {
+            "gridColor": "#e5e7eb"
+          }
+        },
+        "color": {
+          "field": "Fuel Type",
+          "type": "nominal",
+          "title": "Fuel type",
+          "scale": {
+            "domain": [
+              "Regular petrol (91 RON)",
+              "Premium petrol (95 RON)",
+              "Diesel"
+            ],
+            "range": [
+              "#4f78a8",
+              "#f28e2b",
+              "#59a14f"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "title": null
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Year Quarter",
+            "type": "nominal",
+            "title": "Quarter"
+          },
+          {
+            "field": "Fuel Type",
+            "type": "nominal",
+            "title": "Fuel"
+          },
+          {
+            "field": "Price cpl",
+            "type": "quantitative",
+            "title": "Price (c/L)",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "fold": [
+            "Regular petrol (91 RON)",
+            "Premium petrol (95 RON)",
+            "Diesel"
+          ],
+          "as": [
+            "Fuel Type",
+            "Price cpl"
+          ]
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 42,
+        "opacity": 0.72,
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "Price cpl",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Fuel Type",
+          "type": "nominal",
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "Year Quarter",
+            "type": "nominal",
+            "title": "Quarter"
+          },
+          {
+            "field": "Fuel Type",
+            "type": "nominal",
+            "title": "Fuel"
+          },
+          {
+            "field": "Price cpl",
+            "type": "quantitative",
+            "title": "Price (c/L)",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Date": "2022-04-01",
+            "Price cpl": 235,
+            "Label": "2022 price shock"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -4,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#4b5563"
+      },
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "Price cpl",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Date": "2022-04-01"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          5,
+          5
+        ],
+        "color": "#9ca3af"
+      },
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#ffffff",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif"
+    },
+    "title": {
+      "font": "Inter, Arial, sans-serif"
+    }
+  }
+}
