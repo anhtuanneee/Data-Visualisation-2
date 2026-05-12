@@ -1,0 +1,198 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Australia's Fuel Product Mix",
+    "subtitle": "Annual product sales share, 2011 to 2025; green line tracks diesel's exact share",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#6b7280",
+    "offset": 12
+  },
+  "data": {
+    "url": "data/product_mix_annual.csv"
+  },
+  "width": "container",
+  "height": 360,
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "interpolate": "monotone",
+        "opacity": 0.9
+      },
+      "encoding": {
+        "x": {
+          "field": "Year Date",
+          "type": "temporal",
+          "title": "Year",
+          "axis": {
+            "format": "%Y",
+            "labelAngle": 0,
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "Sales BL",
+          "type": "quantitative",
+          "stack": "normalize",
+          "title": "Share of annual product sales",
+          "axis": {
+            "format": ".0%",
+            "gridColor": "#e5e7eb",
+            "values": [0, 0.25, 0.5, 0.75, 1]
+          }
+        },
+        "order": {
+          "field": "Product Order",
+          "type": "ordinal"
+        },
+        "color": {
+          "field": "Product",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": ["Petrol", "Diesel", "Aviation turbine", "LPG", "Other products"],
+            "range": ["#f28e2b", "#59a14f", "#4f78a8", "#e5c04b", "#9aa8b5"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal"
+          }
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal"},
+          {"field": "Product", "type": "nominal"},
+          {"field": "Share", "type": "quantitative", "title": "Share", "format": ".1%"},
+          {"field": "Sales BL", "type": "quantitative", "title": "Sales (billion litres)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"Year Date": "2020-01-01", "Label": "2020 aviation shock"}
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [5, 5],
+        "color": "#6b7280"
+      },
+      "encoding": {
+        "x": {"field": "Year Date", "type": "temporal"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Year Date": "2020-01-01",
+            "Share": 0.92,
+            "Label": "Aviation fuel share\\nbriefly collapsed"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 8,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "lineBreak": "\\n",
+        "color": "#4b5563"
+      },
+      "encoding": {
+        "x": {"field": "Year Date", "type": "temporal"},
+        "y": {"field": "Share", "type": "quantitative"},
+        "text": {"field": "Label"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Product == 'Diesel'"}
+      ],
+      "mark": {
+        "type": "line",
+        "interpolate": "monotone",
+        "stroke": "#ffffff",
+        "strokeWidth": 5
+      },
+      "encoding": {
+        "x": {"field": "Year Date", "type": "temporal"},
+        "y": {
+          "field": "Share",
+          "type": "quantitative",
+          "axis": null
+        }
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Product == 'Diesel'"}
+      ],
+      "mark": {
+        "type": "line",
+        "interpolate": "monotone",
+        "stroke": "#2f6b2d",
+        "strokeWidth": 2.4
+      },
+      "encoding": {
+        "x": {"field": "Year Date", "type": "temporal"},
+        "y": {
+          "field": "Share",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal"},
+          {"field": "Share", "type": "quantitative", "title": "Diesel share", "format": ".1%"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Year Date": "2025-01-01",
+            "Share": 0.5356,
+            "Label": "Diesel share 53.6%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#2f6b2d"
+      },
+      "encoding": {
+        "x": {"field": "Year Date", "type": "temporal"},
+        "y": {"field": "Share", "type": "quantitative"},
+        "text": {"field": "Label"}
+      }
+    }
+  ],
+  "config": {
+    "background": "#ffffff",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif"
+    },
+    "title": {
+      "font": "Inter, Arial, sans-serif"
+    }
+  }
+}
