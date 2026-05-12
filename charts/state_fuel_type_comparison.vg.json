@@ -1,0 +1,222 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Petrol vs Diesel Sales by State",
+    "subtitle": "Pale bar = total road fuel demand; dots show 2025 petrol and diesel sales",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#6b7280",
+    "offset": 12
+  },
+  "data": {
+    "values": [
+      {"State": "NSW", "State Order": 1, "Petrol BL": 5.0561, "Diesel BL": 7.7412, "Total BL": 12.7973},
+      {"State": "QLD", "State Order": 2, "Petrol BL": 3.2769, "Diesel BL": 8.7635, "Total BL": 12.0404},
+      {"State": "VIC", "State Order": 3, "Petrol BL": 4.3488, "Diesel BL": 5.6652, "Total BL": 10.014},
+      {"State": "WA", "State Order": 4, "Petrol BL": 1.7052, "Diesel BL": 8.0428, "Total BL": 9.748},
+      {"State": "SA", "State Order": 5, "Petrol BL": 0.9769, "Diesel BL": 1.8692, "Total BL": 2.8461},
+      {"State": "NT", "State Order": 6, "Petrol BL": 0.1245, "Diesel BL": 0.8205, "Total BL": 0.945},
+      {"State": "TAS", "State Order": 7, "Petrol BL": 0.3091, "Diesel BL": 0.6059, "Total BL": 0.915}
+    ]
+  },
+  "width": "container",
+  "height": 330,
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 4,
+        "size": 26,
+        "color": "#d9e3eb",
+        "opacity": 0.62
+      },
+      "encoding": {
+        "x": {
+          "field": "Total BL",
+          "type": "quantitative",
+          "title": "Billion litres",
+          "scale": {"domain": [-0.35, 14]},
+          "axis": {
+            "gridColor": "#e5e7eb",
+            "values": [0, 2, 4, 6, 8, 10, 12, 14]
+          }
+        },
+        "y": {
+          "field": "State",
+          "type": "nominal",
+          "title": null,
+          "sort": ["NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS"],
+          "axis": {
+            "labelFontWeight": "bold",
+            "labelColor": "#1f2937"
+          }
+        },
+        "tooltip": [
+          {"field": "State", "type": "nominal"},
+          {"field": "Total BL", "type": "quantitative", "title": "Total road fuel (billion litres)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#9aa8b5",
+        "opacity": 0.74
+      },
+      "encoding": {
+        "x": {"field": "Petrol BL", "type": "quantitative"},
+        "x2": {"field": "Diesel BL"},
+        "y": {
+          "field": "State",
+          "type": "nominal",
+          "sort": ["NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS"]
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "fold": ["Petrol BL", "Diesel BL"],
+          "as": ["Fuel Type Raw", "Sales BL"]
+        },
+        {
+          "calculate": "replace(datum['Fuel Type Raw'], ' BL', '')",
+          "as": "Fuel Type"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "filled": true,
+        "size": 128,
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {"field": "Sales BL", "type": "quantitative"},
+        "y": {
+          "field": "State",
+          "type": "nominal",
+          "sort": ["NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS"]
+        },
+        "color": {
+          "field": "Fuel Type",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": ["Petrol", "Diesel"],
+            "range": ["#f28e2b", "#59a14f"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal"
+          }
+        },
+        "tooltip": [
+          {"field": "State", "type": "nominal"},
+          {"field": "Fuel Type", "type": "nominal"},
+          {"field": "Sales BL", "type": "quantitative", "title": "Sales (billion litres)", "format": ".1f"},
+          {"field": "Total BL", "type": "quantitative", "title": "State total (billion litres)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -9,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#374151"
+      },
+      "encoding": {
+        "x": {"field": "Petrol BL", "type": "quantitative"},
+        "y": {
+          "field": "State",
+          "type": "nominal",
+          "sort": ["NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS"]
+        },
+        "text": {
+          "field": "Petrol BL",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 9,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#374151"
+      },
+      "encoding": {
+        "x": {"field": "Diesel BL", "type": "quantitative"},
+        "y": {
+          "field": "State",
+          "type": "nominal",
+          "sort": ["NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS"]
+        },
+        "text": {
+          "field": "Diesel BL",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "State": "WA",
+            "Petrol BL": 1.7052,
+            "Diesel BL": 8.0428,
+            "Label": "largest diesel gap"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 12,
+        "dy": -8,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#4b5563"
+      },
+      "encoding": {
+        "x": {"field": "Diesel BL", "type": "quantitative"},
+        "y": {
+          "field": "State",
+          "type": "nominal",
+          "sort": ["NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS"]
+        },
+        "text": {"field": "Label"}
+      }
+    }
+  ],
+  "config": {
+    "background": "#ffffff",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif"
+    },
+    "title": {
+      "font": "Inter, Arial, sans-serif"
+    }
+  }
+}
