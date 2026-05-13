@@ -1,0 +1,11 @@
+Country,Order,Pretax cpl,Tax cpl,Pump cpl,Highlight
+Netherlands,1,140,202,342,Other
+Denmark,2,151,196,347,Other
+Germany,3,118,188,306,Other
+France,4,130,174,304,Other
+United Kingdom,5,121,155,276,Other
+New Zealand,6,145,102,248,Other
+Korea,7,114,97,211,Other
+Australia,8,129,69,198,Australia
+Canada,9,136,44,181,Other
+United States,10,125,25,150,Other

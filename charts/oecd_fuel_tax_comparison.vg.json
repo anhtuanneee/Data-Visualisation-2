@@ -1,0 +1,261 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Australia's Petrol Tax Is Low by OECD Standards",
+    "subtitle": "Premium petrol (PULP95), 2025 Q3; grey dot = before tax, gold dot = pump price, line = tax added",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#6b7280",
+    "offset": 12
+  },
+  "data": {
+    "url": "data/oecd_pulp95_tax_2025q3.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Order": "number",
+        "Pretax cpl": "number",
+        "Tax cpl": "number",
+        "Pump cpl": "number"
+      }
+    }
+  },
+  "width": "container",
+  "height": 390,
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.Highlight == 'Australia'"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "height": 28,
+        "color": "#fff3d6",
+        "opacity": 0.95
+      },
+      "encoding": {
+        "x": {
+          "datum": 100,
+          "type": "quantitative",
+          "scale": {
+            "domain": [100, 360]
+          }
+        },
+        "x2": {
+          "datum": 360
+        },
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": {
+            "field": "Order",
+            "order": "ascending"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 4,
+        "opacity": 0.78
+      },
+      "encoding": {
+        "x": {
+          "field": "Pretax cpl",
+          "type": "quantitative",
+          "title": "Cents per litre",
+          "scale": {
+            "domain": [100, 360]
+          },
+          "axis": {
+            "gridColor": "#e5e7eb"
+          }
+        },
+        "x2": {
+          "field": "Pump cpl"
+        },
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "Order",
+            "order": "ascending"
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.Highlight == 'Australia'",
+            "value": "#e5a936"
+          },
+          "value": "#cbd5e1"
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Pretax cpl",
+            "type": "quantitative",
+            "title": "Price before tax (c/L)",
+            "format": ".0f"
+          },
+          {
+            "field": "Tax cpl",
+            "type": "quantitative",
+            "title": "Tax added (c/L)",
+            "format": ".0f"
+          },
+          {
+            "field": "Pump cpl",
+            "type": "quantitative",
+            "title": "Pump price (c/L)",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 85,
+        "color": "#94a3b8",
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "Pretax cpl",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": {
+            "field": "Order",
+            "order": "ascending"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Pretax cpl",
+            "type": "quantitative",
+            "title": "Price before tax (c/L)",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 115,
+        "stroke": "#ffffff",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "field": "Pump cpl",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": {
+            "field": "Order",
+            "order": "ascending"
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.Highlight == 'Australia'",
+            "value": "#d5972f"
+          },
+          "value": "#e5a936"
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Pump cpl",
+            "type": "quantitative",
+            "title": "Pump price (c/L)",
+            "format": ".0f"
+          },
+          {
+            "field": "Tax cpl",
+            "type": "quantitative",
+            "title": "Tax added (c/L)",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Country": "Australia",
+            "Order": 8,
+            "Price cpl": 207,
+            "Label": "Australia: 69 c/L tax"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#9a6700"
+      },
+      "encoding": {
+        "x": {
+          "field": "Price cpl",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": {
+            "field": "Order",
+            "order": "ascending"
+          }
+        },
+        "text": {
+          "field": "Label"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#ffffff",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151"
+    },
+    "title": {
+      "font": "Inter, Arial, sans-serif"
+    }
+  }
+}
