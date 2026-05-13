@@ -5,6 +5,8 @@ const productMixChart = "charts/product_mix_over_time.vg.json";
 const supplyDependenceChart = "charts/supply_dependence.vg.json";
 const importSourcesMap = "charts/import_sources_map.vg.json";
 const oecdFuelTaxChart = "charts/oecd_fuel_tax_comparison.vg.json";
+const fuelStockSecurityChart = "charts/fuel_stock_security.vg.json";
+const importSourceConcentrationChart = "charts/import_source_concentration.vg.json";
 
 vegaEmbed("#fuel-prices-chart", priceChart, {
   actions: false
@@ -31,5 +33,13 @@ vegaEmbed("#import-sources-map", importSourcesMap, {
 }).catch(console.error);
 
 vegaEmbed("#oecd-fuel-tax-chart", oecdFuelTaxChart, {
+  actions: false
+}).catch(console.error);
+
+vegaEmbed("#fuel-stock-security-chart", fuelStockSecurityChart, {
+  actions: false
+}).catch(console.error);
+
+vegaEmbed("#import-source-concentration-chart", importSourceConcentrationChart, {
   actions: false
 }).catch(console.error);

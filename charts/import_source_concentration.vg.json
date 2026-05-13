@@ -1,0 +1,303 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Fuel Import Sources Are Highly Concentrated",
+    "subtitle": "2025 source-country shares; bars show individual share, line shows cumulative share",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#6b7280",
+    "offset": 12
+  },
+  "data": {
+    "url": "data/top_import_sources_2025.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Rank": "number",
+        "Total BL": "number",
+        "Import Share": "number",
+        "Cumulative Share": "number"
+      }
+    }
+  },
+  "width": "container",
+  "height": 390,
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusTopLeft": 3,
+        "cornerRadiusTopRight": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "title": null,
+          "sort": [
+            "Singapore",
+            "South Korea",
+            "Malaysia",
+            "Taiwan",
+            "India",
+            "Brunei Darussalam",
+            "China",
+            "United States",
+            "Japan",
+            "Vietnam"
+          ],
+          "axis": {
+            "labelAngle": -28,
+            "labelLimit": 120,
+            "labelPadding": 8
+          }
+        },
+        "y": {
+          "field": "Import Share",
+          "type": "quantitative",
+          "title": "Share of all 2025 oil imports",
+          "scale": {
+            "domain": [0, 1]
+          },
+          "axis": {
+            "format": ".0%",
+            "gridColor": "#e5e7eb"
+          }
+        },
+        "color": {
+          "field": "Group",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": ["Top 3", "Other"],
+            "range": ["#e5a936", "#4f78a8"]
+          },
+          "legend": {
+            "orient": "bottom"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Import Share",
+            "type": "quantitative",
+            "title": "Country share",
+            "format": ".1%"
+          },
+          {
+            "field": "Total BL",
+            "type": "quantitative",
+            "title": "Total imports (BL)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.7,
+        "color": "#111827"
+      },
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": [
+            "Singapore",
+            "South Korea",
+            "Malaysia",
+            "Taiwan",
+            "India",
+            "Brunei Darussalam",
+            "China",
+            "United States",
+            "Japan",
+            "Vietnam"
+          ]
+        },
+        "y": {
+          "field": "Cumulative Share",
+          "type": "quantitative"
+        },
+        "order": {
+          "field": "Rank",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Cumulative Share",
+            "type": "quantitative",
+            "title": "Cumulative share",
+            "format": ".1%"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 95,
+        "color": "#111827",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.4
+      },
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": [
+            "Singapore",
+            "South Korea",
+            "Malaysia",
+            "Taiwan",
+            "India",
+            "Brunei Darussalam",
+            "China",
+            "United States",
+            "Japan",
+            "Vietnam"
+          ]
+        },
+        "y": {
+          "field": "Cumulative Share",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Cumulative Share",
+            "type": "quantitative",
+            "title": "Cumulative share",
+            "format": ".1%"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Country": "Malaysia",
+            "Label Share": 0.52,
+            "Label": "Top 3 sources reach 59.3%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 10,
+        "dy": 0,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#4b5563"
+      },
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": [
+            "Singapore",
+            "South Korea",
+            "Malaysia",
+            "Taiwan",
+            "India",
+            "Brunei Darussalam",
+            "China",
+            "United States",
+            "Japan",
+            "Vietnam"
+          ]
+        },
+        "y": {
+          "field": "Label Share",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Country": "Vietnam",
+            "Label Share": 0.985,
+            "Label": "Top 10 reach 95.2%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "dx": -10,
+        "dy": 0,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#4b5563"
+      },
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": [
+            "Singapore",
+            "South Korea",
+            "Malaysia",
+            "Taiwan",
+            "India",
+            "Brunei Darussalam",
+            "China",
+            "United States",
+            "Japan",
+            "Vietnam"
+          ]
+        },
+        "y": {
+          "field": "Label Share",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Label"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#ffffff",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151"
+    },
+    "title": {
+      "font": "Inter, Arial, sans-serif"
+    }
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Fuel Stock Cover Remains Below the IEA Benchmark",
+    "subtitle": "Monthly net import coverage, July 2010 to December 2025; shaded zone is below 90 days",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#6b7280",
+    "offset": 12
+  },
+  "data": {
+    "url": "data/iea_net_import_cover_monthly.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Month": "date",
+        "Daily net imports kt/day": "number",
+        "IEA days cover": "number",
+        "Benchmark days": "number"
+      }
+    }
+  },
+  "width": "container",
+  "height": 360,
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "Start": "2010-07-01",
+            "End": "2026-08-01",
+            "Low": 40,
+            "Benchmark": 90
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "color": "#fff2d5",
+        "opacity": 0.95
+      },
+      "encoding": {
+        "x": {
+          "field": "Start",
+          "type": "temporal"
+        },
+        "x2": {
+          "field": "End"
+        },
+        "y": {
+          "field": "Low",
+          "type": "quantitative",
+          "scale": {
+            "domain": [40, 100]
+          }
+        },
+        "y2": {
+          "field": "Benchmark"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [5, 5],
+        "strokeWidth": 2,
+        "color": "#d5972f"
+      },
+      "encoding": {
+        "y": {
+          "field": "Benchmark days",
+          "type": "quantitative",
+          "title": "Days of net import coverage",
+          "scale": {
+            "domain": [40, 100]
+          },
+          "axis": {
+            "gridColor": "#e5e7eb"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "interpolate": "monotone",
+        "strokeWidth": 2.8,
+        "color": "#4f78a8"
+      },
+      "encoding": {
+        "x": {
+          "field": "Month",
+          "type": "temporal",
+          "title": "Year",
+          "scale": {
+            "domain": ["2010-07-01", "2026-08-01"]
+          },
+          "axis": {
+            "format": "%Y",
+            "grid": false,
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "IEA days cover",
+          "type": "quantitative",
+          "title": "Days of net import coverage",
+          "scale": {
+            "domain": [40, 100]
+          },
+          "axis": {
+            "gridColor": "#e5e7eb"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Month",
+            "type": "temporal",
+            "title": "Month",
+            "format": "%b %Y"
+          },
+          {
+            "field": "IEA days cover",
+            "type": "quantitative",
+            "title": "IEA cover days",
+            "format": ".0f"
+          },
+          {
+            "field": "Daily net imports kt/day",
+            "type": "quantitative",
+            "title": "Daily net imports (kt/day)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Month": "2017-07-01",
+            "Days": 45,
+            "Label": "Lowest point: 45 days"
+          },
+          {
+            "Month": "2025-12-01",
+            "Days": 50,
+            "Label": "Dec 2025: 50 days"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 80,
+        "color": "#d5972f",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "field": "Month",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "Days",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Label",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Month": "2026-02-01",
+            "Days": 92,
+            "Label": "IEA 90-day benchmark"
+          },
+          {
+            "Month": "2017-07-01",
+            "Days": 45,
+            "Label": "Lowest point: 45 days"
+          },
+          {
+            "Month": "2025-12-01",
+            "Days": 50,
+            "Label": "Dec 2025: 50 days"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "dy": -4,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#4b5563"
+      },
+      "encoding": {
+        "x": {
+          "field": "Month",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "Days",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Label"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#ffffff",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151"
+    },
+    "title": {
+      "font": "Inter, Arial, sans-serif"
+    }
+  }
+}
