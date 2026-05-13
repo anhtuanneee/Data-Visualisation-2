@@ -1,0 +1,186 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Imports Dominate Australia's Liquid Fuel Supply",
+    "subtitle": "Annual total oil imports compared with domestic crude oil and condensate production, 2011 to 2025",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#6b7280",
+    "offset": 12
+  },
+  "data": {
+    "url": "data/supply_dependence_annual.csv"
+  },
+  "width": "container",
+  "height": 360,
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusTopLeft": 2,
+        "cornerRadiusTopRight": 2,
+        "opacity": 0.92
+      },
+      "encoding": {
+        "x": {
+          "field": "Year Date",
+          "type": "temporal",
+          "title": "Year",
+          "scale": {
+            "domain": ["2010-09-01", "2025-10-01"]
+          },
+          "axis": {
+            "format": "%Y",
+            "labelAngle": 0,
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "Share",
+          "type": "quantitative",
+          "stack": "zero",
+          "title": "Share of imports + domestic production",
+          "scale": {"domain": [0, 1]},
+          "axis": {
+            "format": ".0%",
+            "gridColor": "#e5e7eb",
+            "values": [0, 0.25, 0.5, 0.75, 1]
+          }
+        },
+        "order": {
+          "field": "Source Order",
+          "type": "ordinal"
+        },
+        "color": {
+          "field": "Source",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": ["Imports", "Domestic production"],
+            "range": ["#4f78a8", "#e5a936"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal"
+          }
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal"},
+          {"field": "Source", "type": "nominal"},
+          {"field": "Share", "type": "quantitative", "title": "Share", "format": ".1%"},
+          {"field": "Volume BL", "type": "quantitative", "title": "Volume (billion litres)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Source == 'Imports'"}
+      ],
+      "mark": {
+        "type": "line",
+        "interpolate": "monotone",
+        "stroke": "#ffffff",
+        "strokeWidth": 5
+      },
+      "encoding": {
+        "x": {"field": "Year Date", "type": "temporal"},
+        "y": {
+          "field": "Share",
+          "type": "quantitative",
+          "stack": null,
+          "axis": null
+        }
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Source == 'Imports'"}
+      ],
+      "mark": {
+        "type": "line",
+        "interpolate": "monotone",
+        "stroke": "#234a67",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {"field": "Year Date", "type": "temporal"},
+        "y": {
+          "field": "Share",
+          "type": "quantitative",
+          "stack": null,
+          "axis": null
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal"},
+          {"field": "Share", "type": "quantitative", "title": "Import share", "format": ".1%"},
+          {"field": "Import Production Ratio", "type": "quantitative", "title": "Imports / domestic production", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Source == 'Imports' && (datum.Year == 2011 || datum.Year == 2025)"}
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 90,
+        "color": "#234a67",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {"field": "Year Date", "type": "temporal"},
+        "y": {
+          "field": "Share",
+          "type": "quantitative",
+          "stack": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Year Date": "2025-07-01",
+            "Share": 0.8149,
+            "Label": "Import share 81.5%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#234a67"
+      },
+      "encoding": {
+        "x": {"field": "Year Date", "type": "temporal"},
+        "y": {"field": "Share", "type": "quantitative"},
+        "text": {"field": "Label"}
+      }
+    }
+  ],
+  "config": {
+    "background": "#ffffff",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif"
+    },
+    "title": {
+      "font": "Inter, Arial, sans-serif"
+    }
+  }
+}

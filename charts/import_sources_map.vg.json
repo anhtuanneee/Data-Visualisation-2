@@ -1,0 +1,240 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Diesel Share and Road Fuel Demand by State and Territory",
+    "subtitle": "2025: colour shows diesel share; circles show total petrol + diesel sales",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#6b7280",
+    "offset": 12
+  },
+  "width": "container",
+  "height": 520,
+  "projection": {
+    "type": "mercator",
+    "center": [134, -28],
+    "scale": 650
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_states_rewound.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.properties.ste_iso3166_code",
+          "as": "State"
+        },
+        {
+          "filter": "indexof(['NSW','VIC','QLD','WA','SA','TAS','NT','ACT'], datum.State) >= 0"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#eef2f4",
+        "stroke": "#0f172a",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "data/australia_states_rewound.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.properties.ste_iso3166_code",
+          "as": "State"
+        },
+        {
+          "filter": "indexof(['NSW','VIC','QLD','WA','SA','TAS','NT'], datum.State) >= 0"
+        },
+        {
+          "lookup": "State",
+          "from": {
+            "data": {
+              "url": "data/state_map_2025.csv"
+            },
+            "key": "State",
+            "fields": [
+              "State Name",
+              "Petrol BL",
+              "Diesel BL",
+              "Road fuel BL",
+              "Diesel Share"
+            ]
+          }
+        },
+        {
+          "filter": "isValid(datum['Diesel Share'])"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#0f172a",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "color": {
+          "field": "Diesel Share",
+          "type": "quantitative",
+          "title": "Diesel share",
+          "scale": {
+            "domain": [0.55, 0.9],
+            "range": ["#dce5ee", "#8ea5ba", "#55799b", "#1f4e79"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "format": ".0%",
+            "gradientLength": 260
+          }
+        },
+        "tooltip": [
+          {
+            "field": "State Name",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "Diesel Share",
+            "type": "quantitative",
+            "title": "Diesel share",
+            "format": ".1%"
+          },
+          {
+            "field": "Road fuel BL",
+            "type": "quantitative",
+            "title": "Total road fuel (BL)",
+            "format": ".1f"
+          },
+          {
+            "field": "Diesel BL",
+            "type": "quantitative",
+            "title": "Diesel sales (BL)",
+            "format": ".1f"
+          },
+          {
+            "field": "Petrol BL",
+            "type": "quantitative",
+            "title": "Petrol sales (BL)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/state_map_2025.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "fill": "#e5a936",
+        "fillOpacity": 0.82,
+        "stroke": "#ffffff",
+        "strokeWidth": 1.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "Road fuel BL",
+          "type": "quantitative",
+          "title": "Total road fuel (BL)",
+          "scale": {
+            "domain": [0, 13],
+            "range": [70, 1700]
+          },
+          "legend": {
+            "orient": "bottom",
+            "values": [1, 3, 6, 9, 13]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "State Name",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "Road fuel BL",
+            "type": "quantitative",
+            "title": "Total road fuel (BL)",
+            "format": ".1f"
+          },
+          {
+            "field": "Diesel Share",
+            "type": "quantitative",
+            "title": "Diesel share",
+            "format": ".1%"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"Longitude": 118.6, "Latitude": -22.5, "Label": "WA"},
+          {"Longitude": 132.4, "Latitude": -17.0, "Label": "NT"},
+          {"Longitude": 146.0, "Latitude": -20.5, "Label": "QLD"},
+          {"Longitude": 136.0, "Latitude": -28.3, "Label": "SA"},
+          {"Longitude": 148.0, "Latitude": -31.2, "Label": "NSW"},
+          {"Longitude": 145.7, "Latitude": -36.4, "Label": "VIC"},
+          {"Longitude": 148.5, "Latitude": -42.0, "Label": "TAS"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#1f2937"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Label"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#ffffff",
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151",
+      "orient": "bottom"
+    },
+    "title": {
+      "font": "Inter, Arial, sans-serif"
+    }
+  }
+}

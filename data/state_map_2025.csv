@@ -1,0 +1,8 @@
+State,State Name,Longitude,Latitude,Petrol BL,Diesel BL,Road fuel BL,Diesel Share
+NSW,New South Wales,147.0,-32.5,5.0561,7.7412,12.7973,0.6049
+QLD,Queensland,145.0,-22.5,3.2769,8.7635,12.0404,0.7278
+VIC,Victoria,144.0,-37.0,4.3488,5.6652,10.0140,0.5657
+WA,Western Australia,121.5,-25.0,1.7052,8.0428,9.7480,0.8251
+SA,South Australia,135.0,-30.0,0.9769,1.8692,2.8461,0.6568
+NT,Northern Territory,133.0,-19.5,0.1245,0.8205,0.9450,0.8683
+TAS,Tasmania,146.7,-42.0,0.3091,0.6059,0.9150,0.6622
