@@ -1,0 +1,251 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "2025 Fuel Snapshot: Dependence, Demand and Security",
+    "subtitle": "Bars show each takeaway as a share of supply, sales, imports, or benchmark",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#6b7280",
+    "offset": 12
+  },
+  "data": {
+    "url": "data/final_fuel_snapshot_2025.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Order": "number",
+        "Value": "number"
+      }
+    }
+  },
+  "width": "container",
+  "height": 330,
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadius": 5,
+        "height": 28,
+        "color": "#e8edf2"
+      },
+      "encoding": {
+        "x": {
+          "datum": 1,
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "domain": [0, 1]
+          },
+          "axis": {
+            "format": ".0%",
+            "grid": false,
+            "tickCount": 6
+          }
+        },
+        "y": {
+          "field": "Metric",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "Order",
+            "order": "ascending"
+          },
+          "axis": {
+            "labelLimit": 210,
+            "labelPadding": 8
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadius": 5,
+        "height": 28
+      },
+      "encoding": {
+        "x": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "domain": [0, 1]
+          },
+          "axis": {
+            "format": ".0%",
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "Metric",
+          "type": "nominal",
+          "sort": {
+            "field": "Order",
+            "order": "ascending"
+          }
+        },
+        "color": {
+          "field": "Status",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Import heavy",
+              "Diesel led",
+              "Concentrated",
+              "Below benchmark"
+            ],
+            "range": [
+              "#4f78a8",
+              "#59a14f",
+              "#e5a936",
+              "#d95f02"
+            ]
+          },
+          "legend": {
+            "orient": "bottom"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Metric",
+            "type": "nominal"
+          },
+          {
+            "field": "Label",
+            "type": "nominal",
+            "title": "2025 value"
+          },
+          {
+            "field": "Detail",
+            "type": "nominal"
+          },
+          {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Bar value",
+            "format": ".1%"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 130,
+        "color": "#111827",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "type": "nominal",
+          "field": "Metric",
+          "sort": {
+            "field": "Order",
+            "order": "ascending"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Label",
+            "type": "nominal",
+            "title": "2025 value"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#374151"
+      },
+      "encoding": {
+        "x": {
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Metric",
+          "type": "nominal",
+          "sort": {
+            "field": "Order",
+            "order": "ascending"
+          }
+        },
+        "text": {
+          "field": "Label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Metric": "Stock cover against benchmark",
+            "Value": 1,
+            "Label": "90-day benchmark"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dy": -20,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#8a641f"
+      },
+      "encoding": {
+        "x": {
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Metric",
+          "type": "nominal",
+          "sort": {
+            "field": "Order",
+            "order": "ascending"
+          }
+        },
+        "text": {
+          "field": "Label"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#ffffff",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151"
+    },
+    "title": {
+      "font": "Inter, Arial, sans-serif"
+    }
+  }
+}
