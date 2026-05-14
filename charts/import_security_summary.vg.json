@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "2025 Fuel Snapshot: Dependence, Demand and Security",
-    "subtitle": "Bars show each takeaway as a share of supply, sales, imports, or benchmark",
+    "text": "Fuel on the Way Helps, But Cover Often Falls Short",
+    "subtitle": "Monthly IEA days of net import cover including stocks on land, on vessels and overseas, 2018 to Feb 2026",
     "anchor": "start",
     "fontSize": 18,
     "subtitleFontSize": 12,
@@ -10,158 +10,254 @@
     "offset": 12
   },
   "data": {
-    "url": "data/final_fuel_snapshot_2025.csv",
+    "url": "data/fuel_cover_including_onway.csv",
     "format": {
       "type": "csv",
       "parse": {
-        "Order": "number",
-        "Value": "number"
+        "Month": "date",
+        "On land stocks (days)": "number",
+        "Onboard vessels (days)": "number",
+        "Overseas awaiting delivery (days)": "number",
+        "Total cover (days)": "number"
       }
     }
   },
   "width": "container",
-  "height": 330,
+  "height": 370,
   "layer": [
     {
-      "mark": {
-        "type": "bar",
-        "cornerRadius": 5,
-        "height": 28,
-        "color": "#e8edf2"
-      },
-      "encoding": {
-        "x": {
-          "datum": 1,
-          "type": "quantitative",
-          "title": null,
-          "scale": {
-            "domain": [0, 1]
-          },
-          "axis": {
-            "format": ".0%",
-            "grid": false,
-            "tickCount": 6
-          }
+      "transform": [
+        {
+          "fold": [
+            "On land stocks (days)",
+            "Onboard vessels (days)",
+            "Overseas awaiting delivery (days)"
+          ],
+          "as": [
+            "Cover component",
+            "Days"
+          ]
         },
-        "y": {
-          "field": "Metric",
-          "type": "nominal",
-          "title": null,
-          "sort": {
-            "field": "Order",
-            "order": "ascending"
-          },
-          "axis": {
-            "labelLimit": 210,
-            "labelPadding": 8
-          }
+        {
+          "calculate": "datum['Cover component'] == 'On land stocks (days)' ? 1 : datum['Cover component'] == 'Onboard vessels (days)' ? 2 : 3",
+          "as": "Component order"
         }
-      }
-    },
-    {
+      ],
       "mark": {
-        "type": "bar",
-        "cornerRadius": 5,
-        "height": 28
+        "type": "area",
+        "opacity": 0.82
       },
       "encoding": {
         "x": {
-          "field": "Value",
-          "type": "quantitative",
-          "title": null,
+          "field": "Month",
+          "type": "temporal",
+          "title": "Month",
           "scale": {
-            "domain": [0, 1]
+            "domain": [
+              "2018-01-01",
+              "2026-08-01"
+            ]
           },
           "axis": {
-            "format": ".0%",
+            "format": "%Y",
+            "labelAngle": 0,
             "grid": false
           }
         },
         "y": {
-          "field": "Metric",
-          "type": "nominal",
-          "sort": {
-            "field": "Order",
-            "order": "ascending"
-          }
+          "field": "Days",
+          "type": "quantitative",
+          "title": "Days of net import cover",
+          "scale": {
+            "domain": [
+              0,
+              110
+            ]
+          },
+          "axis": {
+            "gridColor": "#e5e7eb"
+          },
+          "stack": "zero"
         },
         "color": {
-          "field": "Status",
+          "field": "Cover component",
           "type": "nominal",
           "title": null,
           "scale": {
             "domain": [
-              "Import heavy",
-              "Diesel led",
-              "Concentrated",
-              "Below benchmark"
+              "On land stocks (days)",
+              "Onboard vessels (days)",
+              "Overseas awaiting delivery (days)"
             ],
             "range": [
               "#4f78a8",
-              "#59a14f",
               "#e5a936",
-              "#d95f02"
+              "#59a14f"
             ]
           },
           "legend": {
-            "orient": "bottom"
+            "orient": "bottom",
+            "labelExpr": "replace(replace(datum.label, ' (days)', ''), 'Onboard vessels', 'Vessels at sea')"
           }
+        },
+        "order": {
+          "field": "Component order",
+          "type": "quantitative"
         },
         "tooltip": [
           {
-            "field": "Metric",
-            "type": "nominal"
+            "field": "Month",
+            "type": "temporal",
+            "title": "Month",
+            "format": "%b %Y"
           },
           {
-            "field": "Label",
+            "field": "Cover component",
             "type": "nominal",
-            "title": "2025 value"
+            "title": "Component"
           },
           {
-            "field": "Detail",
-            "type": "nominal"
-          },
-          {
-            "field": "Value",
+            "field": "Days",
             "type": "quantitative",
-            "title": "Bar value",
-            "format": ".1%"
+            "title": "Days",
+            "format": ".0f"
+          },
+          {
+            "field": "Total cover (days)",
+            "type": "quantitative",
+            "title": "Total cover",
+            "format": ".0f"
           }
         ]
       }
     },
     {
       "mark": {
+        "type": "line",
+        "strokeWidth": 2.8,
+        "color": "#111827"
+      },
+      "encoding": {
+        "x": {
+          "field": "Month",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "Total cover (days)",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Month",
+            "type": "temporal",
+            "title": "Month",
+            "format": "%b %Y"
+          },
+          {
+            "field": "Total cover (days)",
+            "type": "quantitative",
+            "title": "Total cover",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Benchmark": 90
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          6,
+          5
+        ],
+        "strokeWidth": 2,
+        "color": "#d5972f"
+      },
+      "encoding": {
+        "y": {
+          "field": "Benchmark",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Month": "2026-07-01",
+            "Benchmark": 90,
+            "Label": "IEA 90-day benchmark"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dy": -6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#8a641f"
+      },
+      "encoding": {
+        "x": {
+          "field": "Month",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "Benchmark",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Month": "2026-02-01",
+            "Total cover (days)": 61,
+            "Label": "Feb 2026: 61 days including fuel on the way"
+          }
+        ]
+      },
+      "mark": {
         "type": "point",
         "filled": true,
-        "size": 130,
+        "size": 120,
         "color": "#111827",
         "stroke": "#ffffff",
         "strokeWidth": 1.5
       },
       "encoding": {
         "x": {
-          "field": "Value",
-          "type": "quantitative"
+          "field": "Month",
+          "type": "temporal"
         },
         "y": {
-          "type": "nominal",
-          "field": "Metric",
-          "sort": {
-            "field": "Order",
-            "order": "ascending"
-          }
-        },
-        "tooltip": [
-          {
-            "field": "Label",
-            "type": "nominal",
-            "title": "2025 value"
-          }
-        ]
+          "field": "Total cover (days)",
+          "type": "quantitative"
+        }
       }
     },
     {
+      "data": {
+        "values": [
+          {
+            "Month": "2026-02-01",
+            "Total cover (days)": 61,
+            "Label": "Feb 2026: 61 days including fuel on the way"
+          }
+        ]
+      },
       "mark": {
         "type": "text",
         "align": "left",
@@ -173,16 +269,12 @@
       },
       "encoding": {
         "x": {
-          "field": "Value",
-          "type": "quantitative"
+          "field": "Month",
+          "type": "temporal"
         },
         "y": {
-          "field": "Metric",
-          "type": "nominal",
-          "sort": {
-            "field": "Order",
-            "order": "ascending"
-          }
+          "field": "Total cover (days)",
+          "type": "quantitative"
         },
         "text": {
           "field": "Label"
@@ -193,33 +285,30 @@
       "data": {
         "values": [
           {
-            "Metric": "Stock cover against benchmark",
-            "Value": 1,
-            "Label": "90-day benchmark"
+            "Month": "2021-04-01",
+            "Total cover (days)": 104,
+            "Label": "Peak: 104 days"
           }
         ]
       },
       "mark": {
         "type": "text",
-        "align": "right",
+        "align": "left",
         "baseline": "bottom",
-        "dy": -20,
+        "dx": 8,
+        "dy": -4,
         "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#8a641f"
+        "color": "#374151"
       },
       "encoding": {
         "x": {
-          "field": "Value",
-          "type": "quantitative"
+          "field": "Month",
+          "type": "temporal"
         },
         "y": {
-          "field": "Metric",
-          "type": "nominal",
-          "sort": {
-            "field": "Order",
-            "order": "ascending"
-          }
+          "field": "Total cover (days)",
+          "type": "quantitative"
         },
         "text": {
           "field": "Label"

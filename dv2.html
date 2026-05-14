@@ -149,6 +149,82 @@
       width: 100%;
     }
 
+
+    .section.section-reverse {
+      grid-template-columns: minmax(0, 1fr) 330px;
+    }
+
+    .section.section-reverse > div:first-child {
+      grid-column: 2;
+    }
+
+    .section.section-reverse > .chart-panel {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .chart-callouts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .chart-callout {
+      min-height: 74px;
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      background: #f8fafc;
+      padding: 10px 12px;
+      color: #4b5563;
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
+
+    .chart-callout strong {
+      display: block;
+      margin-bottom: 3px;
+      color: #111827;
+      font-size: 0.82rem;
+    }
+
+    .story-break {
+      padding: 42px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .story-break h2 {
+      max-width: 720px;
+      margin-bottom: 20px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      padding: 22px 0;
+      border-top: 1px solid rgba(229, 169, 54, 0.32);
+      border-bottom: 1px solid rgba(229, 169, 54, 0.32);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--accent);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .metric span {
+      display: block;
+      max-width: 300px;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
     @media (max-width: 820px) {
       main {
         width: min(100% - 24px, 1320px);
@@ -170,6 +246,20 @@
 
       .chart-panel {
         padding: 16px;
+      }
+
+
+      .section.section-reverse,
+      .section.section-reverse > div:first-child,
+      .section.section-reverse > .chart-panel {
+        grid-template-columns: 1fr;
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .chart-callouts,
+      .metric-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -207,13 +297,23 @@
     <section class="section" id="sales-by-state">
       <div>
         <p class="section-kicker">Chart 2</p>
-        <h2>Road fuel demand follows different state rhythms.</h2>
+        <h2>Road fuel demand changed unevenly across states.</h2>
         <p class="section-text">
-          These small multiples show annual petrol and diesel sales combined. Each panel uses its own scale so the shape of change is visible for large and small states.
+          This heat map compares annual petrol and diesel demand by state. Cell labels show billion litres, colour shows percentage change from each state's 2011 level, the dashed gold column marks 2020, and the outlined cell marks each state's peak year.
         </p>
       </div>
       <div class="chart-panel">
         <div id="state-sales-chart" class="chart"></div>
+        <div class="chart-callouts" aria-label="Chart 2 key notes">
+          <div class="chart-callout">
+            <strong>COVID dip is marked</strong>
+            The dashed gold column highlights 2020, when several states, especially Victoria, temporarily lost road fuel demand.
+          </div>
+          <div class="chart-callout">
+            <strong>Recovery is uneven</strong>
+            NSW, WA and QLD move into darker blue by 2024-25, while SA stays close to its 2011 level.
+          </div>
+        </div>
       </div>
     </section>
 
@@ -230,7 +330,7 @@
       </div>
     </section>
 
-    <section class="section" id="product-mix">
+    <section class="section section-reverse" id="product-mix">
       <div>
         <p class="section-kicker">Chart 4</p>
         <h2>Diesel now takes the largest share of fuel sales.</h2>
@@ -253,6 +353,27 @@
       </div>
       <div class="chart-panel">
         <div id="supply-dependence-chart" class="chart"></div>
+      </div>
+    </section>
+
+
+
+    <section class="story-break" aria-label="Fuel story transition">
+      <p class="section-kicker">Midpoint snapshot</p>
+      <h2>The demand story points toward a bigger supply question.</h2>
+      <div class="metric-grid">
+        <div class="metric">
+          <strong>53.6%</strong>
+          <span>of product sales were diesel in 2025.</span>
+        </div>
+        <div class="metric">
+          <strong>81.5%</strong>
+          <span>of combined liquid fuel volume came from imports in 2025.</span>
+        </div>
+        <div class="metric">
+          <strong>50 days</strong>
+          <span>of net import cover remained in December 2025, below the 90-day benchmark.</span>
+        </div>
       </div>
     </section>
 
@@ -282,7 +403,7 @@
       </div>
     </section>
 
-    <section class="section" id="fuel-stock-security">
+    <section class="section section-reverse" id="fuel-stock-security">
       <div>
         <p class="section-kicker">Chart 8</p>
         <h2>Fuel security cover has stayed below the 90-day benchmark.</h2>
@@ -311,9 +432,9 @@
     <section class="section" id="import-security-summary">
       <div>
         <p class="section-kicker">Chart 10</p>
-        <h2>Four numbers summarise Australia's fuel story.</h2>
+        <h2>Fuel on the way helps, but often not enough.</h2>
         <p class="section-text">
-          The final chart pulls the main findings into one snapshot. Australia is import-heavy, diesel-led, concentrated around a few overseas suppliers, and still below the IEA 90-day stock-cover benchmark.
+          This final chart adds another security layer: fuel already on vessels or awaiting delivery overseas. These extra stocks lift cover above on-land stocks alone, but total cover still often sits below the 90-day benchmark.
         </p>
       </div>
       <div class="chart-panel">
